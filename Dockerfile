@@ -32,4 +32,5 @@ RUN go install -tags pkcs11 \
   github.com/letsencrypt/boulder/cmd/boulder-va \
   github.com/letsencrypt/boulder/cmd/boulder-wfe
 
+WORKDIR /go/src/github.com/letsencrypt/boulder
 CMD ["bash", "-c", "rsyslogd && /go/bin/boulder"]
